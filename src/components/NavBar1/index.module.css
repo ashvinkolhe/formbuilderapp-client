@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+    border-bottom: var(--border);
+}
+.middle{
+    margin-left: auto;
+    margin-right: auto;
+}
+.right{
+    display: flex;
+    gap: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+.middle div{
+    padding: 10px;
+    cursor: pointer;
+}
+.sharebutton{
+    background-color: #1A5FFF;
+    color: white;
+}
+.menuItem:hover{
+    background-color: var(--hover);
+}

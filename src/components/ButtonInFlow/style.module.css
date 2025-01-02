@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    background-color:var(--bubblesbackground);
+    border-radius: 10px;
+    border: var(--border);
+    box-sizing: border-box;
+    width: 335px;
+}
+.container button{
+    background-color: #1A5FFF;
+}
+.deleteIcon{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #444444;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.input{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+.inputGroup{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.inputGroup button{
+    background-color: inherit;
+    color: red;
+}
+.input input{
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--inputbackground);
+    border: var(--border);
+    padding: 10px;
+    color: var(--color);
+
+}
+

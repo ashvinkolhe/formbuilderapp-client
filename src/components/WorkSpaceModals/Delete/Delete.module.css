@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the container */
+    padding: 20px;
+    width: 350px; /* Set a smaller width for the container */
+    background-color: #2e2e2e; /* Dark background for the container */
+    border-radius: 8px; /* Add rounded corners for better aesthetics */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.body {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    width: 100%; /* Ensure buttons span the container width */
+    margin-top: 15px; /* Add spacing above the button group */
+}
+
+.body button {
+    background-color: inherit; /* Match container background */
+    font-weight: 600;
+    border-radius: 0%;
+    padding: 8px 15px; /* Adjust padding for buttons */
+    border: 1px solid #47474A; /* Border for buttons */
+    cursor: pointer;
+}
+
+.body button:hover {
+    background-color: rgb(206, 210, 214); /* Highlight color on hover */
+}
+
+.deleteButton {
+    color: #4B83FF; /* Blue text for the delete button */
+    border-right: 1px solid #47474A; /* Border separation for delete button */
+}
+
+.cancelButton {
+    color: var(--text); /* Fallback to variable or default text color */
+}
+
+.container input {
+    width: 100%; /* Input spans full width */
+    padding: 10px; /* Add padding for better spacing */
+    margin: 10px 0; /* Spacing between input and other elements */
+    background-color: #3a3a3a; /* Light dark background for input */
+    color: #fff; /* White text for better visibility */
+    border: 1px solid #47474A; /* Subtle border */
+    border-radius: 4px; /* Rounded corners for input */
+    outline: none; /* Remove default outline */
+}
+
+.container input:focus {
+    border-color: #4B83FF; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(75, 131, 255, 0.5); /* Add subtle glow effect */
+}

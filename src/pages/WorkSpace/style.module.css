@@ -1,0 +1,14 @@
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+    height: 100vh;
+}
+hr{
+    margin: 0;
+    border: 0;
+    height: 0.1px;
+    border-bottom: 1px solid #FFFFFF29;
+}

@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: inherit;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+.buttonContainer button{
+    background-color: inherit;
+    width: 100%;
+    border-radius: 0%;
+    font-weight: 700;
+    color: inherit;
+}
+.createButton{
+    border-right:1px solid #47474A ;
+    color: #4B83FF !important;
+}
+.container input{
+    padding: 10px;
+}
+.container span{
+    height: 100%;
+    background-color: black;
+}

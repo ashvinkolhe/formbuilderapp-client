@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom:var(--border);
+}
+
+.activeButton{
+    color: #4B83FF;
+    border: 1px solid #444444;
+    background-color: inherit;
+}
+.Active{
+    background-color: #1A5FFF !important;
+}
+.rightButtons{
+    color: white;
+    background-color: #848890;
+}
+.left input{
+    padding: 10px;
+    border-radius: 7px;
+    border: var(--border);
+}
+.save{
+    background-color: #4ADE80CC;
+    color: white;
+}
+.x{
+    background-color: inherit;
+    color:red;
+}
+.right{
+    display: flex;
+    gap: 20px;
+}
+.notselected{
+    background-color: inherit;
+    color: var(--color);
+}

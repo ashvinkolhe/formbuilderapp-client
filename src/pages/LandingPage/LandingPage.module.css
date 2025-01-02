@@ -1,0 +1,125 @@
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative; /* Ensures circles are positioned relative to this container */
+    overflow: visible; /* Avoids clipping the circles */
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Navbar menu */
+.navbar > div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Body styles */
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Upper section */
+.upper {
+    display: flex;
+}
+
+.upperLeft img {
+    transform: rotate(20deg);
+}
+
+.upperMiddle {
+    text-align: center;
+}
+
+.upperMiddle h1 {
+    font-size: 60px;
+    background: -webkit-linear-gradient(90deg, #4B83FF 0%, #B794F4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Buttons */
+.Button2 {
+    background-color: #1A5FFF;
+    color: white;
+    border: none;
+}
+
+.Button1 {
+    background-color: transparent ;
+    border: 1px solid #1A5FFF;
+    color: #1A5FFF;
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    gap: 80px;
+}
+
+.column span::after {
+    content: url('./../../assets/LandingPage/link.svg');
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.column p {
+    text-decoration: underline;
+}
+
+.Logo {
+    display: flex;
+    gap: 10px;
+}
+
+/* Orange circle */
+.orangeCircle {
+    position: absolute;
+    top: 55%;
+    left: -50px; /* Adjusted position for visibility */
+    width: 700px;
+    height: 720px;
+    background-color: rgba(255, 165, 0, 0.6); /* Orange color */
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0; /* Behind other elements */
+    transform: translateY(-50%);
+}
+
+/* Blue circle */
+.blueCircle {
+    position: absolute;
+    top: 55%;
+    right: -50px; /* Adjusted position for visibility */
+    width: 700px;
+    height: 720px;
+    background-color: rgba(0, 0, 255, 0.6); /* Blue color */
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0; /* Behind other elements */
+    transform: translateY(-50%);
+}
+
+.lower{
+    z-index: 2;
+}

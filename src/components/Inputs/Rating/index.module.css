@@ -1,0 +1,55 @@
+.input{
+    padding: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    gap:10px;
+    align-items:center;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    gap: 10px;
+}
+.input button{
+    background-color: #1A5FFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.send{
+    background-color: #1A5FFF;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Rating{
+    background-color:orange !important;
+}
+
+.saved{
+    padding: 10px;
+    background-color: #777777;
+    display: flex;
+    gap:10px;
+    align-items:center;
+    border-radius: 10px;
+}
+.saved button{
+    background-color: #1A5FFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.sent{
+    background-color:#777777;
+    padding: 10px;
+    border-radius: 10px;
+}

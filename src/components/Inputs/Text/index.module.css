@@ -1,0 +1,39 @@
+.input{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 4px;
+}
+.input button{
+    padding: 10px;
+    display: flex;
+    background-color: #1A5FFF;
+}
+.savedResponse{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 4px;
+}
+
+.savedResponse button{
+    padding: 10px;
+    display: flex;
+    background-color: #777777;
+}
+.savedResponse span{
+    padding: 10px;
+    padding-inline: 20px;
+    background-color: #777777;
+    border-radius: 10px;
+    color: white;
+}
+.savedResponse img{
+    height: 30px;
+}
+.input input{
+    padding: 10px;
+}
+.input img{
+    height: 30px;
+}

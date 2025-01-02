@@ -1,0 +1,96 @@
+/* General Styles for Registration Page */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .register-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    width: 100%;
+  }
+  
+  .register-button {
+    background-color: #1A5FFF;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #155ed7;
+  }
+  
+  .google-signin-btn {
+    background-color: #db4437;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .google-signin-btn:hover {
+    background-color: #c1351d;
+  }
+  
+  .or-separator {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .or-separator span {
+    background-color: #fff;
+    padding: 0 10px;
+  }
+  
+  .register-footer {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .register-footer a {
+    color: #1A5FFF;
+    text-decoration: none;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Loading Indicator */
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .loading img {
+    width: 40px;
+    height: 40px;
+  }
+  

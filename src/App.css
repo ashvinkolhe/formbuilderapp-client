@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    border:none;
+}
+.AuthButton{
+    background-color: #1A5FFF;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0px 4px 10px 0px #E9444B40;
+    justify-content: center ;
+}
+/* Center the p text */
+.centerText {
+  text-align: center;        /* Center align the text */
+  margin-top: 20px;          /* Add some margin on top for spacing */
+  margin-bottom: 20px;       /* Add some margin on bottom for spacing */
+}
+
+.centerText mark {
+  background-color: transparent;
+  color: #1A5FFF; /* Adjust the color of the link */
+}
+
+mark{
+    background-color: inherit;
+    color: #1A5FFF;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.loading{
+    width: 40px;
+    height: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+  border-radius:5.5px;
+  background: #7c7c7c;
+
+}
+::-webkit-scrollbar-track:hover {
+  background: #a8a7a7;
+  border-radius:5.5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #c1c0c0;
+
+  border-radius:5.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000A1; 
+}
+
+input:-webkit-autofill {
+  background-color: transparent !important; /* Remove custom background */
+  border: none!important; /* Reset border */
+  color: #000 !important; /* Reset text color */
+}
+
+.or{
+  justify-content: center;
+}

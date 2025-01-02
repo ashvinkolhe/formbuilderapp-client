@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+    padding: 10px;
+    padding-inline: 20px;
+    background-color: silver;
+    border-radius: 10px;
+    width: fit-content;
+}

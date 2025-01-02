@@ -1,0 +1,65 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: center;
+    padding-block: 20px;
+    padding-inline: 300px 100px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.header, .body {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    align-items: center;
+
+}
+
+.Folders, .Forms {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    gap: 10px;
+    box-sizing: border-box;
+    max-width: 100%; /* Prevent elements from overflowing their container */
+    flex: 1 1 auto; /* Allow elements to grow and shrink as needed */
+    border:var(--border);
+}
+.Folders{
+    max-width: fit-content;
+    background-color: #FFFFFF14;
+}
+.Forms{
+    justify-content: center;
+    max-width:225px;
+    max-width: fit-content;
+    background-color: #FFFFFF80;
+
+    min-width: 225px;
+    height:  270px;
+    border-radius: 6px;
+    position: relative;
+}
+.Forms img{
+    position: absolute;
+    top:-10px;
+    right: -5px;
+}
+.Folders:hover, .Forms:hover {
+    background-color: #777676;
+}
+
+.Active {
+    background-color: #9e9999;
+}
