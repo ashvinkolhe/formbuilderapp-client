@@ -8,7 +8,7 @@ import FolderIcon from './../../assets/Workspace/FolderIcon.svg';
 import DeleteIcon from './../../assets/Workspace/delete.svg';
 import { useFolder } from '../../context/FolderContext';
 import { toast } from 'react-toastify';
-import Loading from './../../assets/Loading/loading.gif'
+import Loading from './../../assets/Loading/loading.gif';
 
 function WorkSpaceBody() {
   const navigate = useNavigate();
@@ -25,30 +25,32 @@ function WorkSpaceBody() {
   // Handle folder changes and update forms
   useEffect(() => {
     getForms(FolderId);
-    if(folders.length > 0){
-      setLoading(false)
+    if (folders.length > 0) {
+      setLoading(false);
     }
   }, [folders, FolderId]);
 
   const creatForm = () => {
-    if(!FolderId){
-      const {_id} = folders.find((item)=>(item.name =='Default'))
-      navigate(`${_id}/createForm`);
-    }
-    else{
+    if (!FolderId) {
+      const firstFolderId = folders.length > 0 ? folders[0]._id : null;
+      if (firstFolderId) {
+        navigate(`${firstFolderId}/createForm`);
+      }
+    } else {
       navigate('createForm');
     }
-  }
+  };
 
   const editForm = (id) => {
-    if(!FolderId){
-      const {_id} = folders.find((item)=>(item.name =='Default'))
-      navigate(`${_id}/editForm/${id}`);
-    }
-    else{
+    if (!FolderId) {
+      const firstFolderId = folders.length > 0 ? folders[0]._id : null;
+      if (firstFolderId) {
+        navigate(`${firstFolderId}/editForm/${id}`);
+      }
+    } else {
       navigate(`editForm/${id}`);
     }
-  }
+  };
 
   const AddFolder = async (foldername) => {
     try {
@@ -112,7 +114,7 @@ function WorkSpaceBody() {
   };
 
   const createFolder = () => openModal(<CreateNewFolder AddFolder={AddFolder} cancel={closeModal} />);
-  const deleteSomething = ({ something, id, onDelete }) => 
+  const deleteSomething = ({ something, id, onDelete }) =>
     openModal(<Delete name={something} id={id} onDelete={onDelete} cancel={closeModal} />);
 
   return (
@@ -122,48 +124,58 @@ function WorkSpaceBody() {
           <img src={FolderIcon} alt="📁" />
           Create a Folder
         </div>
-        {loading ? <img className='loading' src={Loading}/> : folders?.map((folder) => (
-          <div
-            key={folder._id}
-            onClick={() => navigate(`/${dashboardId}/workspace/${folder._id}`)}
-            className={`${styles.Folders} ${
-              (!FolderId && folder.name === 'Default') || FolderId === folder._id
-                ? styles.Active
-                : ''
-            }`}
-          >
-            <span>{folder.name}</span>
-            {folder.name !== 'Default' && (
+        {loading ? (
+          <img className="loading" src={Loading} />
+        ) : (
+          folders
+            .filter((folder) => folder.name !== 'Default') // Exclude Default folder here
+            .map((folder) => (
+              <div
+                key={folder._id}
+                onClick={() => navigate(`/${dashboardId}/workspace/${folder._id}`)}
+                className={`${styles.Folders} ${
+                  FolderId === folder._id ? styles.Active : ''
+                }`}
+              >
+                <span>{folder.name}</span>
+                <img
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    deleteSomething({ something: 'folder', id: folder._id, onDelete: DeleteFolder });
+                  }}
+                  src={DeleteIcon}
+                  alt="🗑️"
+                />
+              </div>
+            ))
+        )}
+      </div>
+      <div className={styles.body}>
+        <div
+          onClick={!loading ? creatForm : null}
+          style={{ flexDirection: 'column', background: '#1A5FFF' }}
+          className={styles.Forms}
+        >
+          <p style={{ fontSize: '40px' }}>+</p>
+          <span>Create a typebot</span>
+        </div>
+        {loading ? (
+          <img className="loading" src={Loading} />
+        ) : (
+          forms.map((form) => (
+            <div onClick={() => editForm(form._id)} key={form._id} className={styles.Forms}>
+              <span>{form.name}</span>
               <img
                 onClick={(e) => {
                   e.stopPropagation();
-                  deleteSomething({ something: 'folder', id: folder._id, onDelete: DeleteFolder });
+                  deleteSomething({ something: 'form', id: form._id, onDelete: DeleteForm });
                 }}
                 src={DeleteIcon}
                 alt="🗑️"
               />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className={styles.body}>
-        <div onClick={!loading ? creatForm : null} style={{ flexDirection: 'column', background: '#1A5FFF' }} className={styles.Forms}>
-          <p style={{ fontSize: '40px' }}>+</p>
-          <span>Create a typebot</span>
-        </div>
-        {loading ? <img className='loading' src={Loading}/> : forms.map((form) => (
-          <div onClick={() => editForm(form._id)} key={form._id} className={styles.Forms}>
-            <span>{form.name}</span>
-            <img
-              onClick={(e) => {
-                e.stopPropagation();
-                deleteSomething({ something: 'form', id: form._id, onDelete: DeleteForm });
-              }}
-              src={DeleteIcon}
-              alt="🗑️"
-            />
-          </div>
-        ))}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
